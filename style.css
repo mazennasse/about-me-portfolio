@@ -1,0 +1,624 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color:black;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.logo span {
+  color: #EAB308; /* اللون اللي عايزه */
+}
+
+/* Navigation Links */
+.nav-links ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #9CA3AF;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+  color: #EAB308;
+}
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  background-color: #111827;
+  padding: 120px 50px; /* space from top navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Text Side */
+.hero-text {
+  max-width: 700px;
+}
+
+.small-frame {
+  font-size: 16px;
+  line-height: 27px;
+  color: #EAB308;
+  margin-bottom: 15px;
+}
+
+.main-text h1 {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+  margin-bottom: 15px;
+}
+
+.main-text p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #6B7280;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.contact-btn {
+  background-color: #FACC15;
+  color: #000000;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 123px;
+  height: 43px;
+
+  display: flex;              /* نضيف flex */
+  justify-content: center;    /* توسيط أفقي */
+  align-items: center;        /* توسيط عمودي */
+  
+  transition: transform 0.3s;
+}
+
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+/* Image Side */
+.hero-image img {
+  width: 427px;
+  height: 427px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+/* About Me Section */
+.aboutme-section {
+  width: 100%;
+  background-color: #020617;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme-container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Title */
+.aboutme-title {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+}
+
+.aboutme-title span {
+  color: #EAB308; /* accent color */
+}
+
+/* Description text */
+.aboutme-text p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #6B7280;
+  margin-bottom: 18px; /* gap between paragraphs */
+}
+
+/* Contact Button */
+.aboutme-btn {
+  background-color: #FACC15;
+  color: #000;
+  font-size: 17px;
+  line-height: 27px;
+  padding: 20px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 123px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.aboutme-btn:hover {
+  transform: scale(1.05);
+}
+/* My Services Section */
+.services-section {
+  width: 100%;
+  background-color: #111827;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.services-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Title */
+.services-header h2 {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+}
+
+.services-header h2 span {
+  color: #EAB308;
+}
+
+.services-header p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #6B7280;
+  margin-top: 15px;
+}
+
+/* Cards Container */
+.services-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.service-card {
+  background-color: #020617;
+  flex: 1;
+  min-width: 280px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Logo */
+.service-logo {
+  font-size: 40px;
+  color: #EAB308;
+}
+
+/* Card Title */
+.service-card h3 {
+  font-size: 26px;
+  line-height: 41px;
+  font-weight: bold;
+  color: #F3F4F6;
+}
+
+/* Card Description */
+.service-card p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #6B7280;
+}
+/* My Portfolio Section */
+/* My Portfolio Section */
+.portfolio-section {
+  width: 100%;
+  background-color: #020617;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Title */
+.portfolio-header h2 {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+  text-align: center;
+}
+
+.portfolio-header h2 span {
+  color: #EAB308;
+}
+
+.portfolio-header p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #9CA3AF;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Portfolio Grid - التعديل هنا */
+.portfolio-grid {
+  display: flex;
+  gap: 20px; /* Gap بين الريتكنجلين */
+  align-items: stretch; /* مهم لجعل الاثنين بنفس الارتفاع */
+  min-height: 400px; /* يمكنك تغيير هذا الرقم */
+}
+
+/* Left Rectangle - التعديل هنا */
+.portfolio-left {
+  flex: 1;
+  border: 2px solid #374151; /* بوردر */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  background-color: rgba(55, 65, 81, 0.1); /* لون خفيف خلف الصورة */
+}
+
+.portfolio-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Rectangle - التعديل هنا */
+.portfolio-right {
+  flex: 1;
+  border: 2px solid #374151; /* بوردر */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  background-color: rgba(55, 65, 81, 0.1); /* لون خفيف خلف الصور */
+}
+
+.right-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* عمودين */
+  grid-template-rows: 1fr 1fr;    /* صفين */
+  gap: 15px; /* زودت المسافة بين الصور */
+  width: 100%;
+  height: 100%;
+  padding: 20px; /* زودت المسافة من الحواف */
+  box-sizing: border-box;
+}
+
+.right-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* حركة جميلة عند hover */
+}
+
+.right-grid img:hover {
+  transform: scale(1.03); /* تكبير بسيط عند المرور على الصورة */
+}
+/* Experience Section */
+.experience-section {
+  width: 100%;
+  background-color: #191D28;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Text */
+.experience-header h2 {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+  text-align: center;
+}
+
+.experience-header h2 span {
+  color: #EAB308;
+}
+
+.experience-header p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #9CA3AF;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Experience Cards Container */
+.experience-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual Card */
+.experience-card {
+  background-color: #020617;
+  flex: 1;
+  min-width: 280px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Date */
+.experience-date {
+  font-size: 20px;
+  line-height: 27px;
+  color: #D1D5DB;
+}
+
+/* Experience Title */
+.experience-title {
+  font-size: 26px;
+  line-height: 41px;
+  font-weight: bold;
+  color: #EAB308;
+}
+
+/* Company Name */
+.experience-company {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+  color: #D1D5DB;
+}
+
+/* Description Text */
+.experience-description {
+  font-size: 16px;
+  line-height: 27px;
+  color: #6B7280;
+}
+/* Contact Section */
+.contact-section {
+  width: 100%;
+  background-color: #020617;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Header */
+.contact-header h2 {
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #F3F4F6;
+  text-align: center;
+}
+
+.contact-header h2 span {
+  color: #EAB308;
+}
+
+.contact-header p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #9CA3AF;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Main Content */
+.contact-main {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left Frame: Info */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid #374151; /* فصل بين كل خانة */
+  padding-bottom: 10px;
+}
+
+.info-title {
+  color: #EAB308;
+  font-size: 16px;
+  line-height: 41px;
+}
+
+.info-detail {
+  color: #F3F4F6;
+  font-size: 16px;
+  line-height: 41px;
+}
+
+/* Right Frame: Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Name */
+.form-input {
+  width: 350px;
+  height: 63px;
+  background-color: #1F2937;
+  color: #F3F4F6;
+  font-size: 16px;
+  line-height: 41px;
+  padding: 15px 20px; /* padding من فوق ومن الشمال */
+  border: none;
+  border-radius: 8px;
+}
+
+/* Textarea Message */
+.form-textarea {
+  width: 540px;
+  height: 166px;
+  background-color: #1F2937;
+  color: #F3F4F6;
+  font-size: 16px;
+  line-height: 27px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+}
+
+/* Contact Button */
+.contact-btn {
+  width: 123px;
+  height: 59px;
+  background-color: #EAB308;
+  color: #000000;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+/* Social / AboutMe Section */
+.social-section {
+  width: 100%;
+  background-color: #020617;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.social-header h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: auto;
+  margin-bottom: 10px;
+}
+
+.social-header p {
+  font-size: 16px;
+  color: #9CA3AF;
+  line-height: 27px;
+  margin-bottom: 40px;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each Icon */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* يحافظ على شكل الصورة */
+  border-radius: 8px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
