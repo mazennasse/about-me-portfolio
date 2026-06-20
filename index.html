@@ -1,266 +1,1369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Mazen</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mazen Nasser — Backend Developer</title>
+<meta name="description" content="Mazen Nasser — Backend Developer specializing in Node.js, Express and RESTful API architecture. Case studies, process, and projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header / Navbar -->
-<header class="navbar">
-  <div class="navbar-container">
-    <div class="logo">About<span>M</span>e</div>
-    <nav class="nav-links">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">SERVICE</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">RESUME</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-bracket">&lt;</span>Mazen Nasser<span class="nav-logo-bracket">/&gt;</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-nav>Home</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#process" class="nav-link" data-nav>Process</a>
+      <a href="#work" class="nav-link" data-nav>Work</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
     </nav>
+    <a href="#contact" class="btn btn-small nav-cta">Let's talk</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="hero-container">
 
-    <!-- Text Side -->
-    <div class="hero-text">
-      <div class="small-frame">Hello, Welcome</div>
-      <div class="main-text">
-        <h1>I’m Mazen Nasser</h1>
-        <p>Passionate about IT and eager to specialize in IT Support, System Administration, and Cloud Administration. 
-Continuously learning C++, Python, Dart (Flutter), HTML, CSS, and JavaScript to build clean and modern websites.</p>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-nav-mobile>Home</a>
+  <a href="#about" data-nav-mobile>About</a>
+  <a href="#process" data-nav-mobile>Process</a>
+  <a href="#work" data-nav-mobile>Work</a>
+  <a href="#contact" data-nav-mobile>Contact</a>
+</div>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">BACKEND DEVELOPER — NODE.JS</p>
+    <h1 class="hero-title reveal">
+      Mazen<br><span class="hero-title-italic">Nasser.</span>
+    </h1>
+    <p class="hero-sub reveal">
+      I design and build the APIs other people's apps quietly depend on —
+      authentication, commerce, real-time messaging, scheduling — engineered
+      to stay correct under pressure, not just demo well.
+    </p>
+
+    <div class="hero-cta reveal">
+      <a href="#work" class="btn btn-primary">View the work</a>
+      <a href="#about" class="btn btn-ghost">About me</a>
+    </div>
+
+    <div class="response-card hero-response reveal" aria-hidden="false">
+      <div class="response-card-bar">
+        <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+        <span class="response-card-path">GET /mazen-nasser HTTP/1.1</span>
       </div>
-      <button class="contact-btn">Contact Us</button>
+      <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"focus"</span>: <span class="tok-string">"Node.js · Express · REST APIs"</span>,
+  <span class="tok-key">"education"</span>: <span class="tok-string">"CS &amp; AI, Cairo University"</span>,
+  <span class="tok-key">"availability"</span>: <span class="tok-string">"open to opportunities"</span>,
+  <span class="tok-key">"location"</span>: <span class="tok-string">"Cairo, Egypt"</span>
+}</code></pre>
+      </div>
     </div>
-
-    <!-- Image Side -->
-    <div class="hero-image">
-      <img src="images/photo_2026-02-08_01-41-13.jpg" alt="Mazen Photo">
-    </div>
-
   </div>
+  <a href="#about" class="scroll-cue reveal" aria-label="Scroll to about section">
+    <span>Scroll</span>
+    <span class="scroll-cue-line"></span>
+  </a>
 </section>
-<!-- About Me Section -->
-<section class="aboutme-section">
-  <div class="aboutme-container">
 
-    <!-- Title -->
-    <div class="aboutme-title">
-      About <span>Me</span>
-    </div>
+<section class="section" id="about">
+  <div class="container">
+    <p class="eyebrow reveal">GET /about</p>
+    <h2 class="section-title reveal">
+      I build the parts of apps<br> nobody notices — <span class="italic">until they break.</span>
+    </h2>
 
-    <!-- Description Text -->
-    <div class="aboutme-text">
-      <p>
-        I’m Mazen Nasser, a 2nd year Computer Science student at Cairo University. 
-        Passionate about IT, I’m eager to specialize in IT Support, System Administration, and Cloud Administration. 
-        I continuously learn C++, Python, Dart (Flutter), HTML, CSS, and JavaScript to build modern and responsive websites.
-      </p>
-      <p>
-        I enjoy turning ideas into functional web pages and solving problems through code. 
-        My goal is to become a skilled IT professional while improving my front-end development skills.
-      </p>
-    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="lede">
+          Most people experience software through a button.  
+I live one layer beneath it — in the routes, middleware, and database queries that decide whether it actually works.
+        </p>
+        <p>
+          I'm a Computer Science & AI student at Cairo University, majoring in Information Systems.
 
-    <!-- Contact Button -->
-    <button class="aboutme-btn">Contact Us</button>
+But most of what I understand about backend engineering didn't come from lectures.
 
-  </div>
-</section>
-<!-- My Services Section -->
-<section class="services-section">
-  <div class="services-container">
+It came from building real things.
 
-    <!-- Title & Description -->
-    <div class="services-header">
-      <h2>My <span>Service</span></h2>
-      <p>Explore the areas I specialize in and the skills I have acquired through learning and practice.</p>
-    </div>
+Authentication systems real users logged into.  
+E-commerce APIs handling real carts.  
+Chat systems that had to stay in sync.
+        </p>
+        <p>
+          Before I settled into Node.js, I spent time on the infrastructure side.
 
-    <!-- Service Cards -->
-    <div class="services-cards">
+CCNA and CompTIA A+ taught me how networks actually move data —  
+and how latency, requests, and failure really behave in real systems.
+I also worked with Flutter and across the full MERN stack.
 
-      <!-- Card 1 -->
-      <div class="service-card">
-        <div class="service-logo">💻</div>
-        <h3>Web Development</h3>
-        <p>I have learned HTML, CSS, JavaScript, and Bootstrap to build responsive and modern websites.</p>
-      </div>
+That gave me a full-picture understanding of applications —
+not just backend in isolation, but how the client actually consumes it.
 
-      <!-- Card 2 -->
-      <div class="service-card">
-        <div class="service-logo">🖥️</div>
-        <h3>IT / Systems</h3>
-        <p>Interested in IT fields: IT Support, System Administration, and Cloud Administration.</p>
-      </div>
+That's why I don't design APIs in isolation.
 
-      <!-- Card 3 -->
-      <div class="service-card">
-        <div class="service-logo">📱</div>
-        <h3>Flutter / Mobile Development</h3>
-        <p>Learned Dart and Flutter to create cross-platform mobile applications.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- My Portfolio Section -->
-<section class="portfolio-section">
-  <div class="portfolio-container">
-
-    <!-- Title & Description -->
-    <div class="portfolio-header">
-      <h2>My <span>Portfolio</span></h2>
-      <p>A collection of inspiring visuals and creative concepts.</p>
-    </div>
-
-    <!-- Portfolio Grid: Left & Right Rectangles -->
-    <div class="portfolio-grid">
-
-      <!-- Left Big Rectangle -->
-      <div class="portfolio-left">
-        <img src="images/Rectangle 1024.png" alt="Main Project">
-      </div>
-
-      <!-- Right Rectangle (div مقسم داخليًا 4 صور) -->
-      <div class="portfolio-right">
-        <div class="right-grid">
-          <img src="images/Rectangle 1025.png" alt="Project 1">
-          <img src="images/Rectangle 1026.png" alt="Project 2">
-          <img src="images/Rectangle 1027.png" alt="Project 3">
-          <img src="images/Rectangle 1028.png" alt="Project 4">
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- Experience Section -->
-<section class="experience-section">
-  <div class="experience-container">
-
-    <!-- Header Text -->
-    <div class="experience-header">
-      <h2>My <span>Experiences</span></h2>
-      <p>A collection of my professional, educational, and personal experiences</p>
-    </div>
-
-    <!-- Experience Cards -->
-    <div class="experience-cards">
-
-      <!-- Card 1 -->
-      <div class="experience-card">
-        <div class="experience-date">2022</div>
-        <div class="experience-title">Sales Assistant</div>
-        <div class="experience-company">Twenty Two</div>
-        <p class="experience-description">
-          This was my first job, which I worked for 5 months. I assisted customers in choosing and purchasing products, organized the store, and gained experience in customer service and communication skills. This role taught me responsibility, teamwork, and how to handle real work situations.
+I design them as contracts —  
+built around how the client will actually use them.
+        </p>
+        <p>
+          My philosophy is simple: an API is a contract. Every endpoint
+          should do exactly what it says, fail loudly and clearly when it
+          can't, and never surprise the developer on the other end of the
+          request. I'd rather ship something predictable than something
+          impressive that breaks under load.
         </p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="experience-card">
-        <div class="experience-date">2025</div>
-        <div class="experience-title">Flutter / Mobile App Development</div>
-        <div class="experience-company">Freelance / Self-Learning</div>
-        <p class="experience-description">
-          Completed a full Flutter course, mastering Dart and all core widgets. Applied the knowledge to develop small mobile applications and worked on freelance projects, gaining practical experience in building responsive and interactive apps. Developed skills in UI design, problem-solving, and mobile app deployment.
-        </p>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Backend systems shipped<br>as freelance projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Core backend skills,<br>practiced end-to-end</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">CS&nbsp;+&nbsp;AI</span>
+          <span class="stat-label">Cairo University,<br>Information Systems</span>
+        </div>
       </div>
+    </div>
+<div class="skills-block reveal">
 
-      <!-- Card 3 -->
-      <div class="experience-card">
-        <div class="experience-date">2025-Present</div>
-        <div class="experience-title">Frontend / Web Development</div>
-        <div class="experience-company">Freelance / Self-Learning</div>
-        <p class="experience-description">
-          Studied HTML, CSS, JavaScript, and Bootstrap to build modern and responsive websites. Practiced creating landing pages and portfolio projects, while completing freelance assignments to gain practical experience. Continuously improving skills and preparing for professional Frontend opportunities.
-        </p>
+  <h3 class="skills-block-title">Engineering Stack</h3>
+
+  <div class="skills-groups">
+
+    <div class="skills-group">
+      <p class="skills-group-label">Backend Engineering</p>
+      <div class="pill-row">
+        <span class="pill">Node.js</span>
+        <span class="pill">Express.js</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Authentication & Authorization</span>
+        <span class="pill">Middleware Architecture</span>
+        <span class="pill">MVC Pattern</span>
+        <span class="pill">Error Handling</span>
+        <span class="pill">Input Validation</span>
       </div>
+    </div>
 
+    <div class="skills-group">
+      <p class="skills-group-label">Computer Science Foundations</p>
+      <div class="pill-row">
+        <span class="pill">Data Structures</span>
+        <span class="pill">Algorithms</span>
+        <span class="pill">OOP</span>
+        <span class="pill">Database Design</span>
+        <span class="pill">System Design Basics</span>
+        <span class="pill">Computer Networks</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">Databases & Dev Tools</p>
+      <div class="pill-row">
+        <span class="pill">MongoDB</span>
+        <span class="pill">SQL Server</span>
+        <span class="pill">Git & GitHub</span>
+        <span class="pill">Docker</span>
+        <span class="pill">CI/CD Basics</span>
+        <span class="pill">AWS Fundamentals</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">Extended Experience</p>
+      <div class="pill-row">
+        <span class="pill">CCNA Networking</span>
+        <span class="pill">CompTIA A+ Fundamentals</span>
+        <span class="pill">Flutter Development</span>
+        <span class="pill">MERN Stack Exposure</span>
+      </div>
     </div>
 
   </div>
+</div>
 </section>
-<!-- Contact Section -->
-<section class="contact-section" id="contact">
-  <div class="contact-container">
 
-    <!-- Header -->
-    <div class="contact-header">
-      <h2>Contact <span>Me</span></h2>
-      <p>Feel free to reach out for any inquiries or collaborations.</p>
-    </div>
+<section class="section section-alt" id="process">
+  <div class="container">
 
-    <!-- Main Content -->
-    <div class="contact-main">
+    <p class="eyebrow reveal">ENGINEERING WORKFLOW</p>
 
-      <!-- Left Frame: Info -->
-      <div class="contact-info">
-        <div class="info-item">
-          <div class="info-title">Address</div>
-          <div class="info-detail">67 Street Sherif, Helwan, Cairo, Egypt</div>
-        </div>
-        <div class="info-item">
-          <div class="info-title">Phone</div>
-          <div class="info-detail">01155402950</div>
-        </div>
-        <div class="info-item">
-          <div class="info-title">Email</div>
-          <div class="info-detail">mazennasser673@gmail.com</div>
-        </div>
-        <div class="info-item">
-          <div class="info-title">Website</div>
-          <div class="info-detail">
-            <a href="https://www.linkedin.com/in/mazen-nasser-5a65a33a9" target="_blank" style="color:#F3F4F6; text-decoration:none;">
-              www.linkedin.com/in/mazen-nasser-5a65a33a9
-            </a>
+    <h2 class="section-title reveal">
+      How I design and ship<br>
+      production-ready <span class="italic">APIs.</span>
+    </h2>
+
+    <p class="section-intro reveal">
+      I follow a structured engineering workflow for every backend system I build.
+      The goal is simple: reduce uncertainty early, enforce consistency in design,
+      and avoid production issues that usually come from skipped fundamentals.
+    </p>
+
+    <div class="process-list">
+
+      <div class="process-step reveal">
+        <span class="process-num">01</span>
+        <div class="process-content">
+          <h3>Requirements & System Design</h3>
+          <p>
+            Start by defining business requirements, user roles, and system boundaries.
+            Model the resources, identify edge cases, and design the API contract
+            before writing any implementation code.
+          </p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">requirements analysis</span>
+            <span class="pill pill-mono">system design</span>
+            <span class="pill pill-mono">API contract</span>
           </div>
         </div>
       </div>
 
-      <!-- Right Frame: Form -->
-      <div class="contact-form">
-        <input type="text" placeholder="Name" class="form-input" />
-        <textarea placeholder="Message" class="form-textarea"></textarea>
-        <button class="contact-btn">Contact Us</button>
+      <div class="process-step reveal">
+        <span class="process-num">02</span>
+        <div class="process-content">
+          <h3>Architecture & Data Modeling</h3>
+          <p>
+            Design the backend architecture using scalable patterns like MVC.
+            Define database schema, relationships, and validation rules to ensure
+            maintainability and future scalability.
+          </p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">MVC architecture</span>
+            <span class="pill pill-mono">database design</span>
+            <span class="pill pill-mono">scalability</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step reveal">
+        <span class="process-num">03</span>
+        <div class="process-content">
+          <h3>Implementation</h3>
+          <p>
+            Build APIs using a layered structure (routes → controllers → services → models),
+            keeping business logic separated and ensuring code remains modular,
+            testable, and maintainable.
+          </p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Node.js</span>
+            <span class="pill pill-mono">Express.js</span>
+            <span class="pill pill-mono">layered architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step reveal">
+        <span class="process-num">04</span>
+        <div class="process-content">
+          <h3>Validation & Hardening</h3>
+          <p>
+            Add production-grade reliability layers including input validation,
+            authentication, authorization, centralized error handling, and rate limiting.
+          </p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">auth & security</span>
+            <span class="pill pill-mono">error handling</span>
+            <span class="pill pill-mono">validation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step reveal">
+        <span class="process-num">05</span>
+        <div class="process-content">
+          <h3>Deployment & Observability</h3>
+          <p>
+            Deploy using containerized environments and CI/CD pipelines.
+            Monitor logs, track errors, and ensure system stability after release.
+          </p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Docker</span>
+            <span class="pill pill-mono">CI/CD</span>
+            <span class="pill pill-mono">AWS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="container">
+
+    <p class="eyebrow reveal">PROJECT PORTFOLIO</p>
+
+    <h2 class="section-title reveal">
+      Production-grade APIs<br>
+      built across real <span class="italic">use cases.</span>
+    </h2>
+
+    <p class="section-intro reveal">
+      A collection of backend systems designed and implemented following
+      production engineering standards — including data modeling, authentication,
+      business logic design, and scalable API architecture.
+    </p>
+
+    <div class="index-list">
+
+      <a href="#project-ecommerce" class="index-row reveal">
+        <span class="index-num">01</span>
+        <span class="index-title">E-Commerce API</span>
+        <span class="index-tag">Full Stack Backend</span>
+        <span class="index-desc">
+          End-to-end commerce system with product catalog, cart workflow,
+          and order lifecycle management.
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+      <a href="#project-auth" class="index-row reveal">
+        <span class="index-num">02</span>
+        <span class="index-title">Authentication & Authorization API</span>
+        <span class="index-tag">Security & Identity</span>
+        <span class="index-desc">
+          Secure JWT-based authentication with refresh token strategy and role-based access control (RBAC).
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+      <a href="#project-blog" class="index-row reveal">
+        <span class="index-num">03</span>
+        <span class="index-title">Content Management API</span>
+        <span class="index-tag">CMS Backend</span>
+        <span class="index-desc">
+          Scalable blog system with posts, categories, and permission-based comment management.
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+      <a href="#project-chat" class="index-row reveal">
+        <span class="index-num">04</span>
+        <span class="index-title">Real-Time Chat API</span>
+        <span class="index-tag">Realtime Systems</span>
+        <span class="index-desc">
+          Socket-based messaging system integrated with REST architecture for persistent data handling.
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+      <a href="#project-booking" class="index-row reveal">
+        <span class="index-num">05</span>
+        <span class="index-title">Booking & Scheduling API</span>
+        <span class="index-tag">Availability Systems</span>
+        <span class="index-desc">
+          Reservation system with server-side validation to prevent conflicts and ensure data consistency.
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+      <a href="#project-tasks" class="index-row reveal">
+        <span class="index-num">06</span>
+        <span class="index-title">Task Management API</span>
+        <span class="index-tag">Productivity Systems</span>
+        <span class="index-desc">
+          Modular task system with projects, boards, filtering, and scalable query structure.
+        </span>
+        <span class="index-arrow">↗</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="case-study" id="project-ecommerce">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-commerce">Commerce</span>
+        <h2 class="case-title">E-Commerce API</h2>
+
+        <p class="case-tagline">
+          A backend commerce system designed to handle product inventory, cart state,
+          and order lifecycle with strict consistency under concurrent requests.
+        </p>
+
+        <a href="https://github.com/mazennasser/ecommerce-api"
+           class="btn btn-ghost btn-small"
+           target="_blank" rel="noopener">
+           View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/ecommerce-api</span>
+        </div>
+
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Engineer"</span>,
+  <span class="tok-key">"context"</span>: <span class="tok-string">"production-style backend system"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Express / MongoDB"</span>,
+  <span class="tok-key">"focus"</span>: <span class="tok-string">"data consistency, scalability, API design"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"completed"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a commerce backend that guarantees correct inventory handling under
+        concurrent checkout requests, prevents overselling, and maintains a consistent
+        order lifecycle across all states.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">System design insight</h3>
+        <p>
+          The main risk in commerce systems is not reading data — it is writing conflicts.
+          Multiple users can modify inventory at the same time, so the system was designed
+          around inventory as the single source of truth with strict server-side validation
+          for every mutation.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Approach</h3>
+        <p>
+          The data model (User, Product, Cart, Order) was defined first with explicit
+          state transitions. Business logic was isolated in a service layer to ensure
+          predictable behavior and avoid logic duplication across controllers.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Router</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth / Validation</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Service Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>MongoDB</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>Product catalog with filtering and search</li>
+          <li>Cart synchronized with real inventory state</li>
+          <li>Order lifecycle with explicit state transitions</li>
+          <li>Role-based access control for admin operations</li>
+          <li>Checkout flow protected against race conditions</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Sample endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-get">GET</span><span class="endpoint-path">/api/products</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/cart</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/orders</span></div>
+          <div class="endpoint-row"><span class="method method-put">PUT</span><span class="endpoint-path">/api/orders/:id/status</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+
+        <div class="phase-card">
+          <span class="phase-label">Design</span>
+          <p>Modeled entities and order state transitions before implementation.</p>
+        </div>
+
+        <div class="phase-card">
+          <span class="phase-label">Implementation</span>
+          <p>Built modular services separating business logic from routing layer.</p>
+        </div>
+
+        <div class="phase-card">
+          <span class="phase-label">Reliability</span>
+          <p>Added validation, centralized error handling, and concurrency-safe checkout logic.</p>
+        </div>
+
+        <div class="phase-card">
+          <span class="phase-label">Delivery</span>
+          <p>Structured API for maintainability, scalability, and deployment readiness.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span>
+        <span class="pill">Express</span>
+        <span class="pill">MongoDB</span>
+        <span class="pill">Mongoose</span>
+        <span class="pill">JWT</span>
+        <span class="pill">Docker</span>
+      </div>
+
+      <a href="#project-auth" class="next-project">
+        Next case study: Authentication API <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="case-study case-study-alt" id="project-auth">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-security">Security</span>
+        <h2 class="case-title">Authentication API</h2>
+
+        <p class="case-tagline">
+          Production-ready authentication service implementing stateless JWT-based security,
+          refresh token rotation, and role-based access control (RBAC) — designed as a reusable
+          module across multiple backend services.
+        </p>
+
+        <a href="https://github.com/mazennasser/auth-api" class="btn btn-ghost btn-small" target="_blank" rel="noopener">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/auth-api</span>
+        </div>
+
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"type"</span>: <span class="tok-string">"Freelance"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Express / JWT / bcrypt"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"production-ready"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a centralized authentication system that can be reused across multiple services,
+        ensuring secure identity verification, minimal coupling, and consistent authorization rules
+        without duplicating logic across projects.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Design decisions</h3>
+        <p>
+          Adopted a stateless authentication model using short-lived access tokens and
+          refresh token rotation to improve security and reduce session risk. Authorization
+          is handled through middleware to enforce consistent access control across all routes.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Architecture approach</h3>
+        <p>
+          Built as a standalone authentication service with clear separation of concerns:
+          controllers handle request flow, services manage token logic, and middleware enforces
+          authentication and RBAC policies.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth Routes</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Validation Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>JWT / bcrypt Service</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>Users Database</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>Secure user registration and authentication flow</li>
+          <li>JWT-based stateless session management</li>
+          <li>Refresh token rotation and revocation strategy</li>
+          <li>Role-Based Access Control (RBAC)</li>
+          <li>Password hashing using bcrypt</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">API endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/auth/register</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/auth/login</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/auth/refresh</span></div>
+          <div class="endpoint-row"><span class="method method-delete">DELETE</span><span class="endpoint-path">/api/auth/logout</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+        <div class="phase-card"><span class="phase-label">Plan</span><p>Defined authentication model, token lifecycle, and security constraints before implementation.</p></div>
+        <div class="phase-card"><span class="phase-label">Build</span><p>Implemented authentication flows, password hashing, and JWT issuance as core service logic.</p></div>
+        <div class="phase-card"><span class="phase-label">Harden</span><p>Added rate limiting, token rotation, and authorization middleware for protected routes.</p></div>
+        <div class="phase-card"><span class="phase-label">Deploy</span><p>Packaged as a reusable module designed for integration across multiple backend systems.</p></div>
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">JWT</span>
+        <span class="pill">bcrypt</span><span class="pill">MongoDB</span><span class="pill">RBAC</span>
+      </div>
+
+      <a href="#project-blog" class="next-project">
+        Next case study: Blog API <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="case-study" id="project-blog">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-content">Content</span>
+        <h2 class="case-title">Blog API</h2>
+
+        <p class="case-tagline">
+          Scalable content management API designed for headless usage — supporting posts,
+          categories, nested comments, and role-based permissions with optimized querying
+          and pagination for production-level content delivery.
+        </p>
+
+        <a href="https://github.com/mazennasser/blog-api" class="btn btn-ghost btn-small" target="_blank" rel="noopener">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/blog-api</span>
+        </div>
+
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"type"</span>: <span class="tok-string">"Freelance"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Express / MongoDB"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"production-ready"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a flexible content API that supports real editorial workflows at scale,
+        including multi-author content, hierarchical comments, and efficient querying
+        without exposing database complexity to the client layer.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Design considerations</h3>
+        <p>
+          Focused on query efficiency and maintainability by introducing a reusable
+          filtering and pagination layer. Avoided route-specific logic duplication
+          by centralizing content querying into a service layer.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Architecture approach</h3>
+        <p>
+          Implemented a clean separation of concerns: controllers handle HTTP flow,
+          services manage business logic, and models define relationships between
+          posts, authors, and comments using a normalized structure.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Router Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth Middleware</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Service Layer (Query Engine)</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>MongoDB</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>RESTful CRUD for posts with ownership-based access control</li>
+          <li>Hierarchical (nested) comments system</li>
+          <li>Category & tag-based content organization</li>
+          <li>Server-side pagination & filtering</li>
+          <li>Optimized query layer for scalable content retrieval</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">API endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-get">GET</span><span class="endpoint-path">/api/posts</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/posts</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/posts/:id/comments</span></div>
+          <div class="endpoint-row"><span class="method method-put">PUT</span><span class="endpoint-path">/api/posts/:id</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+        <div class="phase-card"><span class="phase-label">Plan</span><p>Defined data relationships between authors, posts, categories, and comments before implementation.</p></div>
+        <div class="phase-card"><span class="phase-label">Build</span><p>Implemented CRUD operations with reusable controllers and service-based business logic.</p></div>
+        <div class="phase-card"><span class="phase-label">Harden</span><p>Added pagination, input validation, and role-based access control for write operations.</p></div>
+        <div class="phase-card"><span class="phase-label">Optimize</span><p>Introduced query optimization layer to reduce redundant database calls and improve scalability.</p></div>
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">MongoDB</span>
+        <span class="pill">Mongoose</span><span class="pill">JWT</span>
+      </div>
+
+      <a href="#project-chat" class="next-project">
+        Next case study: Chat API <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="case-study case-study-alt" id="project-chat">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-realtime">Real-time</span>
+        <h2 class="case-title">Chat API</h2>
+
+        <p class="case-tagline">
+          Scalable real-time messaging system combining WebSocket communication with a
+          persistent REST-backed architecture — ensuring message consistency, delivery reliability,
+          and synchronized state across clients.
+        </p>
+
+        <a href="https://github.com/mazennasser/chat-api" class="btn btn-ghost btn-small" target="_blank" rel="noopener">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/chat-api</span>
+        </div>
+
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"type"</span>: <span class="tok-string">"Freelance"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Socket.io / MongoDB"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"production-ready"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a real-time messaging system capable of handling concurrent users,
+        ensuring message delivery consistency, persistent chat history, and reliable
+        synchronization between WebSocket events and REST-based data retrieval.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Architecture design</h3>
+        <p>
+          Implemented a hybrid architecture where WebSockets handle real-time delivery
+          while REST APIs ensure persistence and data consistency. Both layers share a
+          unified service layer to avoid business logic duplication.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Design decisions</h3>
+        <p>
+          Messages are treated as persisted entities first, then broadcast as events.
+          This guarantees that real-time communication never bypasses database integrity,
+          and reconnecting clients always retrieve consistent state.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>REST / WebSocket Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth Middleware</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Event Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Message Service Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>MongoDB</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>Real-time messaging via Socket.io with event-driven architecture</li>
+          <li>Persistent message storage with full conversation history</li>
+          <li>Conversation & room management system</li>
+          <li>Authentication-protected WebSocket connections</li>
+          <li>Typing indicators & online presence tracking</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">API endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/conversations</span></div>
+          <div class="endpoint-row"><span class="method method-get">GET</span><span class="endpoint-path">/api/conversations/:id/messages</span></div>
+          <div class="endpoint-row"><span class="method method-put">PUT</span><span class="endpoint-path">/api/messages/:id/read</span></div>
+          <div class="endpoint-row"><span class="method method-delete">DELETE</span><span class="endpoint-path">/api/messages/:id</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+        <div class="phase-card"><span class="phase-label">Plan</span><p>Defined separation between real-time transport layer and persistent data layer.</p></div>
+        <div class="phase-card"><span class="phase-label">Build</span><p>Implemented Socket.io events alongside REST APIs using a shared service layer.</p></div>
+        <div class="phase-card"><span class="phase-label">Harden</span><p>Added authentication middleware for sockets, message persistence guarantees, and reconnection safety.</p></div>
+        <div class="phase-card"><span class="phase-label">Scale</span><p>Designed event flow to support concurrent users and reduce redundant message processing.</p></div>
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">Socket.io</span>
+        <span class="pill">MongoDB</span><span class="pill">JWT</span>
+      </div>
+
+      <a href="#project-booking" class="next-project">
+        Next case study: Booking System <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="case-study" id="project-booking">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-scheduling">Scheduling</span>
+        <h2 class="case-title">Booking System</h2>
+        <p class="case-tagline">
+          A concurrency-safe scheduling system built around strict availability rules,
+          ensuring consistent reservations across timezones with zero double-booking risk.
+        </p>
+        <a href="https://github.com/mazennasser/booking-api" class="btn btn-ghost btn-small" target="_blank" rel="noopener">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/booking-system</span>
+        </div>
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"type"</span>: <span class="tok-string">"Freelance"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Express / MongoDB"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"production-ready"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a reservation system where availability is enforced at the API level,
+        guaranteeing atomic booking operations and preventing race conditions under concurrent requests.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Architecture strategy</h3>
+        <p>
+          The system was designed around a single source of truth for availability,
+          with strict server-side conflict validation. Every booking write is treated as
+          an atomic operation to eliminate double-booking under concurrent traffic.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Design approach</h3>
+        <p>
+          I defined the full booking lifecycle upfront — pending, confirmed, cancelled —
+          and enforced it through the service layer to ensure predictable state transitions
+          and prevent invalid state mutations across the system.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Express Router</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Validation Layer</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Conflict Resolution Service</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>MongoDB</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>Strict availability enforcement with conflict prevention</li>
+          <li>Atomic reservation creation under concurrent requests</li>
+          <li>Booking lifecycle: pending → confirmed → cancelled</li>
+          <li>Admin scheduling & management endpoints</li>
+          <li>Timezone-safe scheduling with UTC normalization</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Sample endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-get">GET</span><span class="endpoint-path">/api/availability</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/bookings</span></div>
+          <div class="endpoint-row"><span class="method method-put">PUT</span><span class="endpoint-path">/api/bookings/:id/confirm</span></div>
+          <div class="endpoint-row"><span class="method method-delete">DELETE</span><span class="endpoint-path">/api/bookings/:id</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+        <div class="phase-card"><span class="phase-label">Plan</span><p>Defined business rules for availability, conflict detection, and override permissions.</p></div>
+        <div class="phase-card"><span class="phase-label">Build</span><p>Implemented booking lifecycle and core reservation APIs with structured validation.</p></div>
+        <div class="phase-card"><span class="phase-label">Harden</span><p>Enforced server-side conflict checks, UTC normalization, and input validation on every write operation.</p></div>
+        <div class="phase-card"><span class="phase-label">Ship</span><p>Exposed secure admin controls for schedule management without direct database access.</p></div>
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">MongoDB</span>
+        <span class="pill">JWT</span>
+      </div>
+      <a href="#project-tasks" class="next-project">
+        Next case study: Task Management API <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="case-study case-study-alt" id="project-tasks">
+  <div class="container">
+
+    <div class="case-header">
+      <div class="case-header-text reveal">
+        <span class="badge badge-productivity">Productivity</span>
+        <h2 class="case-title">Task Management API</h2>
+        <p class="case-tagline">
+          A scalable task orchestration API designed around real team workflows,
+          with composable filtering, role-aware access, and optimized query design for large datasets.
+        </p>
+        <a href="https://github.com/mazennasser/task-management-api"
+           class="btn btn-ghost btn-small" target="_blank" rel="noopener">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="response-card case-response reveal">
+        <div class="response-card-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="response-card-path">GET /projects/task-management-api</span>
+        </div>
+        <div class="response-card-body">
+<pre><code><span class="tok-status">200 OK</span>
+{
+  <span class="tok-key">"role"</span>: <span class="tok-string">"Backend Developer"</span>,
+  <span class="tok-key">"type"</span>: <span class="tok-string">"Freelance"</span>,
+  <span class="tok-key">"stack"</span>: <span class="tok-string">"Node.js / Express / MongoDB"</span>,
+  <span class="tok-key">"status"</span>: <span class="tok-string">"production-ready"</span>
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">The challenge</h3>
+      <p>
+        Design a task system that supports real-world team workflows with high query complexity,
+        without degrading performance as data grows (tasks, projects, users, assignments).
+        The API must avoid endpoint explosion by supporting flexible, composable filtering.
+      </p>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Architecture strategy</h3>
+        <p>
+          The system is built around a query-first design, where filtering logic is centralized
+          in a reusable service layer. This avoids duplicated controller logic and ensures
+          consistent behavior across all task queries.
+        </p>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Design approach</h3>
+        <p>
+          Instead of treating tasks as simple CRUD entities, the model reflects real execution flow:
+          projects → boards → tasks → assignments.
+          This enables natural scaling toward team-based collaboration and future feature expansion.
+        </p>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">System flow</h3>
+      <div class="arch-flow">
+        <div class="arch-step"><span>Client</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Express Router</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Auth Middleware</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Controller</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step"><span>Query Builder Service</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step arch-step-db"><span>MongoDB</span></div>
+      </div>
+    </div>
+
+    <div class="case-block-pair">
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Key features</h3>
+        <ul class="feature-list">
+          <li>Multi-project task organization (boards, workflows)</li>
+          <li>Role-aware task assignment (team-based access control)</li>
+          <li>Composable filtering (status, priority, assignee, due date)</li>
+          <li>Optimized query layer to avoid endpoint duplication</li>
+          <li>Activity tracking for auditability and traceability</li>
+        </ul>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-block-title">Sample endpoints</h3>
+        <div class="endpoint-list">
+          <div class="endpoint-row"><span class="method method-get">GET</span><span class="endpoint-path">/api/tasks?status=open&priority=high</span></div>
+          <div class="endpoint-row"><span class="method method-post">POST</span><span class="endpoint-path">/api/tasks</span></div>
+          <div class="endpoint-row"><span class="method method-put">PUT</span><span class="endpoint-path">/api/tasks/:id</span></div>
+          <div class="endpoint-row"><span class="method method-delete">DELETE</span><span class="endpoint-path">/api/tasks/:id</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block reveal">
+      <h3 class="case-block-title">Execution breakdown</h3>
+      <div class="phase-grid">
+        <div class="phase-card"><span class="phase-label">Plan</span>
+          <p>Modeled real team workflows (projects, boards, tasks) before implementation to ensure scalable structure.</p>
+        </div>
+
+        <div class="phase-card"><span class="phase-label">Build</span>
+          <p>Implemented task lifecycle with assignment, priority handling, and structured CRUD operations.</p>
+        </div>
+
+        <div class="phase-card"><span class="phase-label">Harden</span>
+          <p>Built a centralized query engine to support composable filters and reduce redundant database calls.</p>
+        </div>
+
+        <div class="phase-card"><span class="phase-label">Ship</span>
+          <p>Added activity logging and consistent response formatting to improve observability and debugging.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-footer reveal">
+      <div class="pill-row">
+        <span class="pill">Node.js</span>
+        <span class="pill">Express</span>
+        <span class="pill">MongoDB</span>
+        <span class="pill">JWT</span>
+      </div>
+
+      <a href="#all-work" class="next-project">
+        See all projects together <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-alt" id="all-work">
+  <div class="container">
+
+    <p class="eyebrow reveal">GET /projects?scope=portfolio</p>
+
+    <h2 class="section-title reveal">
+      Engineering work,<br>structured & <span class="italic">production-minded.</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+      A collection of backend systems designed around real-world constraints —
+      scalability, security, data consistency, and clean service separation.
+    </p>
+
+    <div class="project-grid">
+
+      <a href="#project-ecommerce" class="project-card reveal" data-pattern="1">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">{ }</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-commerce badge-sm">Commerce System</span>
+          <h3>E-Commerce API</h3>
+          <p>Inventory-safe catalog, cart orchestration, and order lifecycle management.</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Node.js</span>
+            <span class="pill pill-mono">MongoDB</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#project-auth" class="project-card reveal" data-pattern="2">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">⇄</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-security badge-sm">Identity & Access</span>
+          <h3>Authentication API</h3>
+          <p>Stateless JWT-based auth with secure role-based access control (RBAC).</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">JWT</span>
+            <span class="pill pill-mono">bcrypt</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#project-blog" class="project-card reveal" data-pattern="3">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">¶</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-content badge-sm">Content System</span>
+          <h3>Blog API</h3>
+          <p>Structured content model with posts, categories, and nested discussions.</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Express</span>
+            <span class="pill pill-mono">MongoDB</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#project-chat" class="project-card reveal" data-pattern="4">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">●●●</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-realtime badge-sm">Realtime System</span>
+          <h3>Chat API</h3>
+          <p>Event-driven messaging using Socket.io with persistent message storage.</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Socket.io</span>
+            <span class="pill pill-mono">JWT</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#project-booking" class="project-card reveal" data-pattern="5">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">▦</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-scheduling badge-sm">Scheduling Engine</span>
+          <h3>Booking System</h3>
+          <p>Conflict-safe scheduling with strict availability and timezone consistency.</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Node.js</span>
+            <span class="pill pill-mono">MongoDB</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#project-tasks" class="project-card reveal" data-pattern="6">
+        <div class="project-card-visual">
+          <span class="project-card-glyph">✓</span>
+        </div>
+        <div class="project-card-body">
+          <span class="badge badge-productivity badge-sm">Workflow System</span>
+          <h3>Task Management API</h3>
+          <p>Composable task orchestration with filters, assignments, and audit logging.</p>
+          <div class="pill-row pill-row-mini">
+            <span class="pill pill-mono">Express</span>
+            <span class="pill pill-mono">MongoDB</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="container">
+
+    <p class="eyebrow reveal">POST /contact</p>
+
+    <h2 class="section-title reveal">
+      Let's build systems<br>
+      that are <span class="italic">reliable.</span>
+    </h2>
+
+    <p class="section-intro reveal">
+      Backend-focused developer working on structured, scalable and maintainable APIs.
+      Open to internships and freelance opportunities.
+    </p>
+
+    <div class="contact-grid reveal">
+
+      <a href="mailto:mazennasser673@gmail.com" class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">mazennasser673@gmail.com</span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <a href="https://github.com/mazennasse" class="contact-row" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/mazennasser</span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/mazen-nasser-5a65a33a9/" class="contact-row" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/mazen-nasser</span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <div class="contact-row contact-row-static">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Cairo, Egypt</span>
       </div>
 
     </div>
 
   </div>
 </section>
-<!-- Social / AboutMe Section -->
-<section class="social-section">
-  <div class="social-container">
 
-    <!-- Title & Description -->
-    <div class="social-header">
-      <h2>About Me</h2>
-      <p>Connect with me on social media and see my professional work.</p>
-    </div>
-
-    <!-- Social Icons as Images -->
-    <div class="social-icons">
-      <a href="#" class="social-icon"><img src="images/Vector.png" alt="Facebook"></a>
-      <a href="#" class="social-icon"><img src="images/Frame.png" alt="Twitter"></a>
-      <a href="https://www.linkedin.com/in/mazen-nasser-5a65a33a9" class="social-icon" target="_blank"><img src="images/Vector (1).png" alt="LinkedIn"></a>
-      <a href="#" class="social-icon"><img src="images/Frame (1).png" alt="Instagram"></a>
-      <a href="#" class="social-icon"><img src="images/Vector (2).png" alt="YouTube"></a>
-      <a href="#" class="social-icon"><img src="images/Vector (3).png" alt="Website"></a>
-    </div>
-
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>Built by Mazen Nasser © 2026</p>
+    <a href="#home" class="back-to-top">Back to top ↑</a>
   </div>
-</section>
+</footer>
+
+</main>
 
 <script src="script.js"></script>
 </body>
